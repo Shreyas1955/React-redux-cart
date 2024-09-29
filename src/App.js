@@ -11,7 +11,8 @@ function App() {
     <>
     <Header/>
     <Routes>
-      <Route path='/' element={<Cards/>}/>
+      <Route path="*" element={<Cards />} />
+
       <Route path='/Cart' element ={<CardsDetails/>} />
     </Routes>
     
