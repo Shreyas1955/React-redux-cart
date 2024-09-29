@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Badge from "@mui/material/Badge";
 import { NavLink } from "react-router-dom";
 import Menu from '@mui/material/Menu';
@@ -22,6 +22,12 @@ const Header = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/cards');
+  }, [navigate]);
 
   const totalPrice = getdata.reduce((acc, item) => acc + (item.price * item.qnty), 0);
 
